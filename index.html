@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>ReferIt3D</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <!-- <meta property="og:image" content="https://people.eecs.berkeley.edu/~bmild/fourfeat/img/foxface.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="512">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://people.eecs.berkeley.edu/~bmild/fourfeat/"/>
+    <meta property="og:title" content="ReLMoGen" />
+    <meta property="og:description" content="Project page for Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains." /> -->
+
+        <!--TWITTER-->
+    <!-- <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fourier Feature Networks" />
+    <meta name="twitter:description" content="Project page for Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains." />
+    <meta name="twitter:image" content="https://people.eecs.berkeley.edu/~bmild/fourfeat/img/foxface.jpg" /> -->
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <link rel="icon" type="image/png" href="img/seal_icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110862391-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110862391-1');
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+			
+            <h2 class="col-md-12 text-center">
+				
+               ReferIt3D: Neural Listeners for Fine-Grained 3D  Object <br> Identification in Real-World Scenes</br>
+<!--                 <small>
+                    arXiv 2020
+                </small> -->
+            </h2>
+			
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#">
+                         Panos Achlioptas
+                        </a>
+                        </br>Stanford University
+                    </li>
+                    <li>
+                        <a href="#">
+                         Ahmed Abdelreheem
+                        </a>
+                        </br>KAUST
+                    </li>
+                    <li>
+                        <a href="http://fxia.me/">
+                            Fei Xia
+                        </a>
+                        </br>Stanford University
+                    </li>
+        
+                    <br>
+                    
+                    <li>
+                        <a href="#">
+                          Mohamed Elhoseiny
+                        </a>
+                        </br>Stanford University, KAUST
+                    </li>
+                    <li>
+                        <a href="#">
+                          Leonidas Guibas
+                        </a>
+                        </br>Stanford University
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+      <!--   <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2006.10739">
+                            <image src="img/ff_paper_image.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/tancik/fourier-feature-networks">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+ -->
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+<!--                 <image src="img/teaser.png" class="img-responsive" alt="overview"><br>
+ -->                <p class="text-justify">
+In this work we study the problem of using referential lan- guage to identify common objects in real-world 3D scenes. We focus on a challenging setup where the referred object belongs to a fine-grained ob- ject class and the underlying scene contains multiple object instances of that class. Due to the scarcity and unsuitability of existent 3D-oriented linguistic resources for this task, we first develop two large-scale and complementary visio-linguistic datasets: i) Sr3D, which contains 83.5K template-based utterances leveraging spatial relations among fine-grained object classes to localize a referred object in a scene, and ii) Nr3D which contains 41.5K natural, free-form, utterances collected by deploying a 2- player object reference game in 3D scenes. Using utterances of either datasets, human listeners can recognize the referred object with high (>86%, 92% resp.) accuracy. By tapping on this data, we develop novel neural listeners that can comprehend object-centric natural language and identify the referred object directly in a 3D scene. Our key technical con- tribution is designing an approach for combining linguistic and geometric information (in the form of 3D point clouds) and creating multi-modal (3D) neural listeners. We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck for language-assisted 3D object identification.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+			   <video id="v0" width="100%" loop="" muted="" controls="">
+			     <source src="img/hi_res.mp4" type="video/mp4">
+		 	</video>
+			
+               </div>
+                
+
+            </div>
+        </div>
+            
+
+     <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Method
+                </h3>
+        </div>
+		
+    </div>
+
+    
+     <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results
+                </h3>
+        </div>
+		
+		
+		
+    </div>
+
+
+     <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Analysis
+                </h3>
+        </div>
+		
+		
+	</div>
+	
+	
+
+
+
+      <!--   <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Related links
+                </h3>
+                <p class="text-justify">
+                    Random Fourier features were first proposed in the seminal work of <a href="https://people.eecs.berkeley.edu/~brecht/papers/07.rah.rec.nips.pdf">Rahimi & Recht (2007)</a>.
+                </p>
+                <p class="text-justify">
+                    The neural tangent kernel was introduced in <a href="https://arxiv.org/abs/1806.07572">Jacot et al. (2018)</a>. 
+                </p>
+                <p class="text-justify">
+                    We relied on the excellent open source projects <a href="https://github.com/google/jax">JAX</a> and <a href="https://github.com/google/neural-tangents">Neural Tangents</a> for training networks and calculating neural tangent kernels.
+                </p>
+                <p class="text-justify">
+                    In own previous work on <em>neural radiance fields</em> (<a href="https://www.matthewtancik.com/nerf">NeRF</a>), we were surprised to find that a "positional encoding" of input coordinates helped networks learn significantly higher frequency details, inspiring our exploration in this project.
+                </p>
+                <p class="text-justify">
+                    <a href="https://vsitzmann.github.io/siren/">Sitzmann et al. (2020)</a> concurrently introduced <em>sinusoidal representation networks</em> (SIREN), demonstrating exciting progress in coordinate based MLP representations by using a sine function as the nonlinearity between <em>all</em> layers in the network. This allows the MLPs to accurately represent first and second order derivatives of low dimensional signals. 
+                </p>
+                <p class="text-justify">
+                    You can find code to replicate all our experiments on <a href="https://github.com/tancik/fourier-feature-networks">GitHub</a>, but if you just want to try experimenting with the images used on this webpage you can find the uncompressed originals here: 
+                    <a href="img/lion_orig.png">Lion</a>,
+                    <a href="img/greece_orig.png">Greece</a>,
+                    <a href="img/fox_orig.png">Fox</a>.
+                </p>
+            </div>
+        </div> -->
+        
+
+<!--         <div class="row" id="header_img">
+            <figure class="col-md-8 col-md-offset-2">
+                <image src="img/llff_teaser.png" class="img-responsive" alt="overview">
+                <figcaption>
+                </figcaption>
+            </figure>
+                
+        </div> -->
+            
+<!--         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{tancik2020fourierfeat,
+    title={Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains},
+    author={Matthew Tancik and Pratul P. Srinivasan and Ben Mildenhall and Sara Fridovich-Keil and Nithin Raghavan and Utkarsh Singhal and Ravi Ramamoorthi and Jonathan T. Barron and Ren Ng},
+    journal={arXiv preprint arXiv:2006.10739},
+    year={2020}
+}</textarea>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                We thank 
+                    <br>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
