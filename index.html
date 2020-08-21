@@ -36,7 +36,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
-
     <script src="js/app.js"></script>
 </head>
 
@@ -47,9 +46,9 @@
         <h2 class="col-md-12 text-center" style="padding-bottom:20px">
 
             <b>ReferIt3D: Neural Listeners for Fine-Grained<br>3D Object Identification in Real-World Scenes</br></b>
-            <!--                 <span style="font-size:15pt">
-                                ECCV 2020, Oral
-                            </span> -->
+            <span style="font-size:15pt"> ECCV 2020, Oral </span>
+            <br>
+            <span style="font-size:15pt; color:red"> This page is <b>work-in-progress</b> (Please come-back on the 24rth of August)</span>
         </h2>
 
     </div>
@@ -98,7 +97,7 @@
         <div class="col-md-6 col-md-offset-3 text-center">
             <ul class="nav nav-pills nav-justified">
                 <li>
-                    <a href="">
+                    <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf">
                         <h4><strong>[ Paper ]</strong></h4>
                     </a>
                 </li>
@@ -164,39 +163,29 @@
     <div class="row" id="dataset" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                <b>Dataset</b>
+                <b>Datasets</b>
             </h3>
-            To get access to our dataset, please fill out <a href="">Referit3D Terms of Use form</a>. once accepted you
-            will receive an
-            email back with the download link.
-        </div>
-    </div>
+            You can download Nr3D <a href="">here</a> (WIP-MB) and Sr3D <a href="">here</a> (WIP-MB).
 
-    <div class="row" id="dataset_browser" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>
-                <b>Dataset Browser</b>
-            </h3>
-            We have created a browser for ReferIt3D natural references dataset (Nr3d), it is <a
-                href="./data_browser.html"><strong>available here</strong></a>
+            <br>
+            <h4><b>Nr3D-Browser</b></h4>
+            You can use <a href="./data_browser.html">this browser</a> to quickly explore Nr3d.
             <br>
             <br>
             <figure>
-                <image src="img/browser.png" style="padding-bottom:10px" class="img-responsive"
-                       alt="overview">
-                </image>
+                <img src="img/browser.png" style="padding-bottom:10px" class="img-responsive" alt="browsder">
                 <figcaption>
                 </figcaption>
             </figure>
-        </div>
 
+        </div>
     </div>
 
 
     <div class="row" id="benchmark" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                <b>ReferIt3D Leaderboard</b>
+                <b>ReferIt3D Benchmark Challenge</b>
             </h3>
             Coming soon!
         </div>
@@ -221,15 +210,13 @@
         <div class="col-md-8 col-md-offset-2">
             A visual encoder processes (via a shared PointNet++) each 3D object of a given scene that is represented by
             a 6D point cloud containing its xyz coordinates and RGB color. Simultaneously, the utterance describing the
-            referred object (e.g., “the armchair next to the whiteboard”) is processed by a Recurrent Neural Network
+            referred object (e.g., “<i>the armchair next to the whiteboard</i>”) is processed by a Recurrent Neural Network
             (RNN). The resulting visio-linguistic representations are fused together and processed by a Dynamic Graph
             Convolution Network (DGCN) which creates an object-centric and scene- (context-) aware representation per
             object. The output of the DGCN is processed by an MLP classifier that estimates for every object its
             likelihood to be the referred one. Two auxiliary losses modulate the visio-linguistic representations before
             they are processed by the DGCN via an FG object- class classifier and a referential-text classifier.
         </div>
-
-
     </div>
 
 
@@ -253,7 +240,7 @@
         <div class="col-md-8 col-md-offset-2">
             Success cases are in the top four images and Failure in the bottom two. Targets are shown in green boxes and
             distractors in red. The network predictions are shown in a dashed yellow circle, along with the predicted
-            probabilities. Please note that probabilities of inter class distractors are not illustrated here.
+            probabilities. Please note that probabilities of inter class distractors are not shown.
         </div>
 
     </div>
@@ -263,14 +250,14 @@
             <h3>
                 <b>Citation</b>
             </h3>
-            If you find our project useful, please consider citing us:
+            If you find our work useful in your research, please consider citing:
             <pre class="w3-panel w3-leftbar w3-light-grey"
             >
 @article{achlioptas2020referit_3d,
-    title={ReferIt3D: Neural Listeners for Fine-Grained<br>3D Object Identification in Real-World Scenes},
+    title={ReferIt3D: Neural Listeners for Fine-Grained 3D Object Identification in Real-World Scenes},
     author={Achlioptas, Panos and Abdelreheem, Ahmed and Xia, Fei and Elhoseiny, Mohamed and Guibas, Leonidas},
     journal={16th European Conference on Computer Vision (ECCV)},
-year={2020}
+    year={2020}
 }</pre>
         </div>
     </div>
