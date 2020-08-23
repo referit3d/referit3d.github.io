@@ -46,15 +46,14 @@
         <h2 class="col-md-12 text-center" style="padding-bottom:20px">
 
             <b>ReferIt3D: Neural Listeners for Fine-Grained<br>3D Object Identification in Real-World Scenes</br></b>
-            <span style="font-size:15pt"> ECCV 2020, Oral </span>
+            <span style="font-size:18pt"> ECCV 2020, Oral </span>
             <br>
-            <span style="font-size:15pt; color:red"> This page is <b>work-in-progress</b> (Please come-back on the <b>24th of August</b> to access our code and more!)</span>
         </h2>
 
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
-            <ul class="list-inline" style="font-size:13pt">
+            <ul class="list-inline" style="font-size:18pt">
                 <li>
                     <a href="http://ai.stanford.edu/~optas/">
                         Panos Achlioptas
@@ -116,6 +115,11 @@
                         <h4><strong>[ Dataset ]</strong></h4>
                     </a>
                 </li>
+<!--                <li>-->
+<!--                    <a href="">-->
+<!--                        <h4><strong>[ Benchmark ]</strong> (coming-soon)</h4>-->
+<!--                    </a>-->
+<!--                </li>-->
             </ul>
         </div>
     </div>
@@ -169,31 +173,19 @@
             <h3>
                 <b>Dataset</b>
             </h3>
-            You can download Nr3D <a href="">here</a> (WIP-MB) and Sr3D <a href="">here</a> (WIP-MB).
-
+            You can download Nr3D <a href="">here</a> (WIP-MB) and Sr3D <a href="">here</a> (WIP-MB). You can quickly explore Nr3D using our <a href="./data_browser.html"> browser</a>.
             <br>
-            <h4><b>Nr3D-Browser</b></h4>
-            You can use <a href="./data_browser.html">this browser</a> to quickly explore Nr3d.
-            <br>
-            <br>
-            <figure>
-                <img src="img/browser.png" style="padding-bottom:10px" class="img-responsive" alt="browsder">
-                <figcaption>
-                </figcaption>
-            </figure>
+<!--            <h4><b>Nr3D-Browser</b></h4>-->
+<!--            You can use <a href="./data_browser.html">this browser</a> to quickly explore Nr3d.-->
+<!--            <br>-->
+<!--            <br>-->
+<!--            <figure>-->
+<!--                <img src="img/browser.png" style="padding-bottom:10px" class="img-responsive" alt="browsder">-->
+<!--                <figcaption>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
 
         </div>
-    </div>
-
-
-    <div class="row" id="benchmark" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>
-                <b>ReferIt3D Benchmark Challenge</b>
-            </h3>
-            Coming soon!
-        </div>
-
     </div>
 
     <div class="row" style="padding-bottom:30px">
@@ -227,7 +219,7 @@
     <div class="row" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                <b>Results</b>
+                <b>Qualitative Results</b>
             </h3>
         </div>
 
@@ -255,8 +247,7 @@
                 <b>Citation</b>
             </h3>
             If you find our work useful in your research, please consider citing:
-            <pre class="w3-panel w3-leftbar w3-light-grey"
-            >
+<pre class="w3-panel w3-leftbar w3-light-grey">
 @article{achlioptas2020referit_3d,
     title={ReferIt3D: Neural Listeners for Fine-Grained 3D Object Identification in Real-World Scenes},
     author={Achlioptas, Panos and Abdelreheem, Ahmed and Xia, Fei and Elhoseiny, Mohamed and Guibas, Leonidas},
@@ -266,62 +257,17 @@
         </div>
     </div>
 
+    <div class="row" id="benchmark" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>ReferIt3D Benchmark Challenge</b>
+            </h3>
+            Coming soon!
+        </div>
 
-    <!--   <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-              <h3>
-                  Related links
-              </h3>
-              <p class="text-justify">
-                  Random Fourier features were first proposed in the seminal work of <a href="https://people.eecs.berkeley.edu/~brecht/papers/07.rah.rec.nips.pdf">Rahimi & Recht (2007)</a>.
-              </p>
-              <p class="text-justify">
-                  The neural tangent kernel was introduced in <a href="https://arxiv.org/abs/1806.07572">Jacot et al. (2018)</a>.
-              </p>
-              <p class="text-justify">
-                  We relied on the excellent open source projects <a href="https://github.com/google/jax">JAX</a> and <a href="https://github.com/google/neural-tangents">Neural Tangents</a> for training networks and calculating neural tangent kernels.
-              </p>
-              <p class="text-justify">
-                  In own previous work on <em>neural radiance fields</em> (<a href="https://www.matthewtancik.com/nerf">NeRF</a>), we were surprised to find that a "positional encoding" of input coordinates helped networks learn significantly higher frequency details, inspiring our exploration in this project.
-              </p>
-              <p class="text-justify">
-                  <a href="https://vsitzmann.github.io/siren/">Sitzmann et al. (2020)</a> concurrently introduced <em>sinusoidal representation networks</em> (SIREN), demonstrating exciting progress in coordinate based MLP representations by using a sine function as the nonlinearity between <em>all</em> layers in the network. This allows the MLPs to accurately represent first and second order derivatives of low dimensional signals.
-              </p>
-              <p class="text-justify">
-                  You can find code to replicate all our experiments on <a href="https://github.com/tancik/fourier-feature-networks">GitHub</a>, but if you just want to try experimenting with the images used on this webpage you can find the uncompressed originals here:
-                  <a href="img/lion_orig.png">Lion</a>,
-                  <a href="img/greece_orig.png">Greece</a>,
-                  <a href="img/fox_orig.png">Fox</a>.
-              </p>
-          </div>
-      </div> -->
+    </div>
 
 
-    <!--         <div class="row" id="header_img">
-                <figure class="col-md-8 col-md-offset-2">
-                    <image src="img/llff_teaser.png" class="img-responsive" alt="overview">
-                    <figcaption>
-                    </figcaption>
-                </figure>
-
-            </div> -->
-
-    <!--         <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h3>
-                        Citation
-                    </h3>
-                    <div class="form-group col-md-10 col-md-offset-1">
-                        <textarea id="bibtex" class="form-control" readonly>
-    @article{tancik2020fourierfeat,
-        title={Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains},
-        author={Matthew Tancik and Pratul P. Srinivasan and Ben Mildenhall and Sara Fridovich-Keil and Nithin Raghavan and Utkarsh Singhal and Ravi Ramamoorthi and Jonathan T. Barron and Ren Ng},
-        journal={arXiv preprint arXiv:2006.10739},
-        year={2020}
-    }</textarea>
-                    </div>
-                </div>
-            </div> -->
 
     <div class="row" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
