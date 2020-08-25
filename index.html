@@ -160,7 +160,7 @@
     <div class="row" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                <b>Method</b>
+                <b>Method: ReferIt3DNet</b>
             </h3>
         </div>
 
@@ -173,14 +173,14 @@
         </div>
 
         <div class="col-md-8 col-md-offset-2">
-            A visual encoder processes (via a shared PointNet++) each 3D object of a given scene that is represented by
-            a 6D point cloud containing its xyz coordinates and RGB color. Simultaneously, the utterance describing the
-            referred object (e.g., “<i>the armchair next to the whiteboard</i>”) is processed by a Recurrent Neural Network
-            (RNN). The resulting visio-linguistic representations are fused together and processed by a Dynamic Graph
-            Convolution Network (DGCN) which creates an object-centric and scene- (context-) aware representation per
-            object. The output of the DGCN is processed by an MLP classifier that estimates for every object its
-            likelihood to be the referred one. Two auxiliary losses modulate the visio-linguistic representations before
-            they are processed by the DGCN via an FG object- class classifier and a referential-text classifier.
+            Each object of a 3D scene, represented as a 6D point cloud containing its xyz coordinates and RGB color,
+            is encoded by a visual encoder (e.g., PointNet++), with shared weights. Simultaneously, the utterance
+            describing the referred object (e.g., “<i>the armchair next to the whiteboard</i>”) is processed by a Recurrent Neural
+            Network (RNN). The resulting representations are fused together and processed by a Dynamic Graph Convolution
+            Network (DGCN) which creates an object-centric <i>and</i> scene- (context-) aware representation per object.
+            The output of the DGCN is processed by an MLP classifier that estimates the likelihood of each object to be
+            the referred one. Two auxiliary losses modulate the unfused representations before these are processed by the DGCN
+            via an object-class classifier and a text classifier respectively.
         </div>
     </div>
 
@@ -201,11 +201,12 @@
         </div>
 
         <div class="col-md-8 col-md-offset-2">
-            Success cases are in the top four images and Failure in the bottom two. Targets are shown in green boxes and
-            distractors in red. The network predictions are shown in a dashed yellow circle, along with the predicted
-            probabilities. Please note that probabilities of inter class distractors are not shown.
+            Successful cases of applying <b><i>ReferIt3DNet</i></b> are shown in the top four images and failure
+            ones in the bottom two. Targets are shown in <span style="color:green">green</span> boxes, intra-class
+            distractors in <span style="color:red">red</span>, and the referential text is displayed under each image.
+            The network predictions are shown inside dashed <span style="color:yellow">yellow</span> circles, along with the
+                inferred probabilities. We omit the probabilities of inter-class distractors to ease the presentation.
         </div>
-
     </div>
 
     <div class="row" id="citation" style="padding-bottom:30px">
@@ -233,7 +234,6 @@
         </div>
 
     </div>
-
 
 
     <div class="row" style="padding-bottom:30px">
