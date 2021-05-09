@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>ReferIt3D</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="img/seal_icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript">
+        var methods, asc1 = -1,
+            asc2 = 1,
+            asc3 = 1;
+            asc4 = 1;
+            asc5 = 1;
+        window.onload = function () {
+            methods = document.getElementById("methods");
+            sort_table(methods, 1, asc1)
+        }
+
+        function sort_table(tbody, col, asc) {
+            var rows = tbody.rows,
+                rlen = rows.length,
+                arr = new Array(),
+                i, j, cells, clen;
+            // fill the array with values from the table
+            for (i = 0; i < rlen; i++) {
+                cells = rows[i].cells;
+                clen = cells.length;
+                arr[i] = new Array();
+                for (j = 0; j < clen; j++) {
+                    arr[i][j] = cells[j].innerHTML;
+                }
+            }
+            // sort the array by the specified column number (col) and order (asc)
+            arr.sort(function (a, b) {
+                return (a[col] == b[col]) ? 0 : ((a[col] > b[col]) ? asc : -1 * asc);
+            });
+            // replace existing rows with new rows created from the sorted array
+            for (i = 0; i < rlen; i++) {
+                rows[i].innerHTML = "<td>" + arr[i].join("</td><td>") + "</td>";
+            }
+        }
+    </script>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            border: none;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 4px 16px;
+            font-family: Times New Roman;
+            font-size: 24px;
+            text-align: left;
+        }
+        th {
+            background-color: #C8C8C8;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container" id="main">
+    <div class="row">
+        <h2 class="col-md-12 text-center" style="padding-bottom:20px">
+
+            <b>ReferIt3D Benchmark</br></b>
+            <br>
+        </h2>
+    </div>
+  
+
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            
+            
+        </div>
+    </div>
+
+    <div class="row" id="benchmark" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Nr3D Benchmark </b>
+            </h3>
+
+             <table>
+        <thead>
+            <tr>                
+                <th>Method</th>
+                <th onclick="sort_table(methods, 1, asc1); asc1 *= -1; asc2 = 1; asc3 = 1; asc4 = 1; asc5 = 1">Overall</th>
+                <th onclick="sort_table(methods, 2, asc2); asc2 *= -1; asc3 = 1; asc1 = 1; asc4 = 1; asc5 = 1">Easy</th>
+                <th onclick="sort_table(methods, 3, asc3); asc3 *= -1; asc1 = 1; asc2 = 1; asc4 = 1; asc5 = 1">Hard</th>
+                <th onclick="sort_table(methods, 4, asc4); asc4 *= -1; asc3 = 1; asc1 = 1; asc2 = 1; asc5 = 1">View-Dependent</th>
+                <th onclick="sort_table(methods, 5, asc5); asc5 *= -1; asc1 = 1; asc2 = 1; asc4 = 1; asc3 = 1">View-Independent</th>
+            </tr>
+        </thead>
+        <tbody id="methods">
+            <tr>
+                <td><a href="https://referit3d.github.io">ReferIt3D</a> </td>
+                <td>35.6</td>
+                <td>43.6</td>
+                <td>27.9</td>
+                <td>32.5</td>
+                <td>37.1</td>
+            </tr>
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2103.16381.pdf">FFL-3DOG</a> </td>
+                <td>41.7</td>
+                <td>48.2</td>
+                <td>35.0</td>
+                <td>37.1</td>
+                <td>44.7</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf">Text-Guided-GNNs</a> </td>
+                <td>37.3</td>
+                <td>44.2</td>
+                <td>30.6</td>
+                <td>35.8</td>
+                <td>38.0</td>
+            </tr>
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2103.01128.pdf">InstanceRefer</a> </td>
+                <td>38.8</td>
+                <td>46.0</td>
+                <td>31.8</td>
+                <td>34.5</td>
+                <td>41.9</td>
+            </tr>
+       
+        </tbody>
+    </table>
+
+        </div>
+    </div>
+
+
+    <div class="row" id="benchmark" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Sr3D Benchmark </b>
+            </h3>
+        </div>
+    </div>
+
+       <div class="row" id="benchmark" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Reporting new results </b>
+            </h3>
+            If you have new results on Nr3D and Sr3D to report, please send the performance numbers and the paper link to <a href="mailto:optas@stanford.edu">Panos Achlioptas</a>.
+        </div>
+    </div>
+
+
+    </div>
+       
+    </body>
+
+</html>
