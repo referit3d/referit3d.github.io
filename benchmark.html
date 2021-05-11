@@ -89,17 +89,29 @@
     </div>
   
 
-    <div class="row" style="padding-bottom:30px">
+    <div class="row" id="intro" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
-            
-            
+            <h3>
+                <b>Intro and Rules</b>
+            </h3>
+            We are interested in reporting the capacity of different approaches in identifying a 3D object based on referential language. To this end we use the same benchmark, and look at the same angles we investigated in the <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf"> ReferIt3D paper</a>.
+            <br><br>
+            Namely we consider:
+            <ul>
+                <li>How well a method works when the input language is Natural (<a href="#benchmark-nr3d"><i>Nr3D challenge</i></a>) <strong>vs.</strong> Synthetic concerning only spatial-relations (<a href="#benchmark-sr3d"><i>Sr3D challenge</i></a>)?</li>
+                <li>How well a method works when the number of same fine-grained instances present in a scene and referred in language are exactly two (<i>Easy</i> case, e.g., 2 office-chairs) <strong>vs.</strong> when the number of such distractors is larger (<i>Hard</i> case) </li>
+                <li>How well a method works when the linguistic reference makes use of <i>View-independent</i> expressions, e.g., "", <strong>vs.</strong> <i>View-dependent</i> ones e.g., "". </li>
+            </ul>
+
+
+
         </div>
     </div>
 
-    <div class="row" id="benchmark" style="padding-bottom:30px">
+    <div class="row" id="benchmark-nr3d" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                <b>Nr3D Benchmark</b>
+                <b>Nr3D Challenge</b>
             </h3>
 
              <table>
@@ -154,15 +166,15 @@
     </div>
 
 
-    <div class="row" id="benchmark" style="padding-bottom:30px">
+    <div class="row" id="benchmark-sr3d" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                <b>Sr3D Benchmark </b>
+                <b>Sr3D Challenge</b>
             </h3>
         </div>
     </div>
 
-       <div class="row" id="benchmark" style="padding-bottom:30px">
+       <div class="row" id="report-results" style="padding-bottom:30px">
         <div class="col-md-8 col-md-offset-2">
             <h3>
                 <b>Reporting new results </b>
