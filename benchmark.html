@@ -12,11 +12,14 @@
 
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -28,8 +31,8 @@
         var methods, asc1 = -1,
             asc2 = 1,
             asc3 = 1;
-            asc4 = 1;
-            asc5 = 1;
+        asc4 = 1;
+        asc5 = 1;
         window.onload = function () {
             methods = document.getElementById("methods");
             sort_table(methods, 1, asc1)
@@ -64,140 +67,287 @@
             border-collapse: collapse;
             border: none;
         }
-        th,        
+
+        th,
         td {
             border: 1px solid black;
             padding: 4px 16px;
             text-align: center;
         }
-        th {            
+
+        th {
             background-color: #663178;
             color: white;
             cursor: pointer;
         }
+
+        /* SR3D Style */
+        th.sr3d {
+            background-color: #df690f;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Add a black background color to the top navigation */
+        .topnav {
+            background-color: #343a40;
+            overflow: hidden;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            /*background-color: #ddd;*/
+            color: white;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .bnav {
+            background-color: #343a40;
+            overflow: hidden;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .bnav  a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
     </style>
+
 
 </head>
 
 <body>
+<div class="topnav">
+    <a> Referit3D</a>
+    <a href="referit3d.github.io">Project Page</a>
+    <a href="https://github.com/referit3d/referit3d">Code</a>
+    <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf">Paper</a>
+</div>
+
 <div class="container" id="main">
-    
 
 
-    <!-- <div class="row">
-        <h2 class="col-md-12 text-center" style="padding-bottom:20px">
+    <!--    <div class="row" id="teaser-image" style="padding-bottom:40px">-->
+    <!--        <div class="col-md-12 col-md-offset-1">-->
+    <!--            <img src="img/benchmark_teaser.jpg"/>-->
+    <!--            <br>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
-            <b>ReferIt3D Benchmarks</br></b>
-            <br>
-        </h2>
-    </div> -->
-
-     <div class="row" id="teaser-image" style="padding-bottom:40px">
-            <div class="col-md-12 col-md-offset-1">
-            <img src="img/benchmark_teaser.jpg" />
-            <br>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h1 class="page-header">
+                <b>Referit3D Benchmarks</b>
+            </h1>
+        </div>
     </div>
 
-    </div>
-  
-
-    <div class="row" id="intro" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>
+    <div class="row " id="intro" style="padding-bottom:30px">
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class="">
                 <b>Intro and Rules</b>
-            </h3>
-            We are interested in reporting the capacity of different approaches in identifying a 3D object based on referential language. To this end we use the same benchmark, and look at the same angles we investigated in the <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf"> ReferIt3D paper</a>.
+            </h2>
+            We are interested in reporting the capacity of different approaches in identifying a 3D object based on
+            referential language. To this end we use the same benchmark, and look at the same angles we investigated in
+            the <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf"> ReferIt3D paper</a>.
             <br><br>
             Namely we consider:
             <ul>
-                <li>How well a method works when the input language is Natural (<a href="#benchmark-nr3d"><i>Nr3D challenge</i></a>) <strong>vs.</strong> Synthetic concerning only spatial-relations (<a href="#benchmark-sr3d"><i>Sr3D challenge</i></a>)?</li>
-                <li>How well a method works when the number of same fine-grained instances present in a scene and referred in language are exactly two (<i>Easy</i> case, e.g., 2 office-chairs) <strong>vs.</strong> when the number of such distractors is larger (<i>Hard</i> case) </li>
-                <li>How well a method works when the linguistic reference makes use of <i>View-Dependent</i> expressions, e.g., <i>"Facing the couch... on the right side"</i>, <strong>vs.</strong> <i>View-Independent</i> ones e.g., <i>"the nightstand between the bed and the curtain"</i>. </li>
+                <li>How well a method works when the input language is Natural (<a href="#benchmark-nr3d"><i>Nr3D
+                    challenge</i></a>) <strong>vs.</strong> Synthetic concerning only spatial-relations (<a
+                        href="#benchmark-sr3d"><i>Sr3D challenge</i></a>)?
+                </li>
+                <li>How well a method works when the number of same fine-grained instances present in a scene and
+                    referred in language are exactly two (<i>Easy</i> case, e.g., 2 office-chairs) <strong>vs.</strong>
+                    when the number of such distractors is larger (<i>Hard</i> case)
+                </li>
+                <li>How well a method works when the linguistic reference makes use of <i>View-Dependent</i>
+                    expressions, e.g., <i>"Facing the couch... on the right side"</i>, <strong>vs.</strong> <i>View-Independent</i>
+                    ones e.g., <i>"the nightstand between the bed and the curtain"</i>.
+                </li>
             </ul>
 
 
-
         </div>
     </div>
 
+    <!-- Nr3D table -->
     <div class="row" id="benchmark-nr3d" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class=" ">
                 <b>Nr3D Challenge</b>
-            </h3>
-
-             <table>
-        <thead>
-            <tr>                
-                <th>Paper</th>
-                <th onclick="sort_table(methods, 1, asc1); asc1 *= -1; asc2 = 1; asc3 = 1; asc4 = 1; asc5 = 1">Overall</th>
-                <th onclick="sort_table(methods, 2, asc2); asc2 *= -1; asc3 = 1; asc1 = 1; asc4 = 1; asc5 = 1">Easy</th>
-                <th onclick="sort_table(methods, 3, asc3); asc3 *= -1; asc1 = 1; asc2 = 1; asc4 = 1; asc5 = 1">Hard</th>
-                <th onclick="sort_table(methods, 4, asc4); asc4 *= -1; asc3 = 1; asc1 = 1; asc2 = 1; asc5 = 1">View-Dependent</th>
-                <th onclick="sort_table(methods, 5, asc5); asc5 *= -1; asc1 = 1; asc2 = 1; asc4 = 1; asc3 = 1">View-Independent</th>
-            </tr>
-        </thead>
-        <tbody id="methods">
-            <tr>
-                <td><a href="https://referit3d.github.io">ReferIt3D</a> </td>
-                <td>35.6</td>
-                <td>43.6</td>
-                <td>27.9</td>
-                <td>32.5</td>
-                <td>37.1</td>
-            </tr>
-            <tr>
-                <td><a href="https://arxiv.org/pdf/2103.16381.pdf">FFL-3DOG</a> </td>
-                <td><strong>41.7</strong></td>
-                <td><strong>48.2</strong></td>
-                <td><strong>35.0</strong></td>
-                <td><strong>37.1</strong></td>
-                <td><strong>44.7</strong></td>
-            </tr>
-            <tr>
-                <td><a href="https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf">Text-Guided-GNNs</a> </td>
-                <td>37.3</td>
-                <td>44.2</td>
-                <td>30.6</td>
-                <td>35.8</td>
-                <td>38.0</td>
-            </tr>
-            <tr>
-                <td><a href="https://arxiv.org/pdf/2103.01128.pdf">InstanceRefer</a> </td>
-                <td>38.8</td>
-                <td>46.0</td>
-                <td>31.8</td>
-                <td>34.5</td>
-                <td>41.9</td>
-            </tr>
-       
-        </tbody>
-    </table>
-
+            </h2>
+            <img src="img/benchmark_teaser_mod.jpg" class="img-fluid center-block" style=" width: 80%; height: auto;"/>
+            <table id="nr3d_table" class="table table-bordered" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Paper</th>
+                    <th>Overall</th>
+                    <th>Easy</th>
+                    <th>Hard</th>
+                    <th>View-Dependent</th>
+                    <th>View-Independent</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-left"><a href="https://referit3d.github.io">ReferIt3D</a></td>
+                    <td>35.6%</td>
+                    <td>43.6%</td>
+                    <td>27.9%</td>
+                    <td>32.5%</td>
+                    <td>37.1%</td>
+                </tr>
+                <tr>
+                    <td class="text-left"><a href="https://arxiv.org/pdf/2103.16381.pdf">FFL-3DOG</a></td>
+                    <td><strong>41.7%</strong></td>
+                    <td><strong>48.2%</strong></td>
+                    <td><strong>35.0%</strong></td>
+                    <td><strong>37.1%</strong></td>
+                    <td><strong>44.7%</strong></td>
+                </tr>
+                <tr>
+                    <td class="text-left"><a href="https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf">Text-Guided-GNNs</a>
+                    </td>
+                    <td>37.3%</td>
+                    <td>44.2%</td>
+                    <td>30.6%</td>
+                    <td>35.8%</td>
+                    <td>38.0%</td>
+                </tr>
+                <tr>
+                    <td class="text-left"><a href="https://arxiv.org/pdf/2103.01128.pdf">InstanceRefer</a></td>
+                    <td>38.8%</td>
+                    <td>46.0%</td>
+                    <td>31.8%</td>
+                    <td>34.5%</td>
+                    <td>41.9%</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-
+    <!-- Sr3D table -->
     <div class="row" id="benchmark-sr3d" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class=" ">
                 <b>Sr3D Challenge</b>
-            </h3>
+            </h2>
+            <img src="img/benchmark_teaser_mod_sr3d.jpg" class="img-fluid center-block"  style=" width: 80%; height: auto;"/>
+            <table id="sr3d_table" class="table table-bordered" style="width:100%">
+                <thead>
+                <tr>
+                    <th class="sr3d">Paper</th>
+                    <th class="sr3d">Overall</th>
+                    <th class="sr3d">Easy</th>
+                    <th class="sr3d">Hard</th>
+                    <th class="sr3d">View-Dependent</th>
+                    <th class="sr3d">View-Independent</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-left"><a href="https://referit3d.github.io">ReferIt3D</a></td>
+                    <td>40.8%</td>
+                    <td>44.7%</td>
+                    <td>31.5%</td>
+                    <td>39.2%</td>
+                    <td>40.8%</td>
+                </tr>
+                <!--                <tr>-->
+                <!--                    <td class="text-left"><a href="https://arxiv.org/pdf/2103.16381.pdf">FFL-3DOG</a></td>-->
+                <!--                    <td><strong>41.7%</strong></td>-->
+                <!--                    <td><strong>48.2%</strong></td>-->
+                <!--                    <td><strong>35.0%</strong></td>-->
+                <!--                    <td><strong>37.1%</strong></td>-->
+                <!--                    <td><strong>44.7%</strong></td>-->
+                <!--                </tr>-->
+                <tr>
+                    <td class="text-left"><a href="https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf">Text-Guided-GNNs</a>
+                    </td>
+                    <td>45.0%</td>
+                    <td>48.5%</td>
+                    <td>36.9%</td>
+                    <td><strong>45.8%</strong></td>
+                    <td>45.0%</td>
+                </tr>
+                <tr>
+                    <td class="text-left"><a href="https://arxiv.org/pdf/2103.01128.pdf">InstanceRefer</a></td>
+                    <td><strong>48.0%</strong></td>
+                    <td><strong>51.1%</strong></td>
+                    <td><strong>40.5%</strong></td>
+                    <td>45.4%</td>
+                    <td><strong>48.1%</strong></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-       <div class="row" id="report-results" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="row" id="report-results" style="padding-bottom:30px">
+        <div class="col-md-10 col-md-offset-1">
             <h3>
                 <b>Reporting new results </b>
             </h3>
-            If you have new results on Sr3D or Nr3D to report, please send your performance numbers and the accompanying paper link to <a href="http://ai.stanford.edu/~optas">Panos Achlioptas</a>.
+            If you have new results on Sr3D or Nr3D to report, please send your performance numbers and the accompanying
+            paper link to <a href="http://ai.stanford.edu/~optas">Panos Achlioptas</a>.
         </div>
     </div>
 
+</div>
 
-    </div>
-       
-    </body>
+<div class="bnav">
 
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#nr3d_table').DataTable({
+            columnDefs: [ // disable sorting of the first column
+                {orderable: false, targets: 0}
+            ],
+            "order": [[1, "desc"]], // Default Ordering on the overall column
+            searching: false, // Disable search bar
+            paging: false, // Stop pagination for now
+            info: false // hide "Showing 1 to M of N entries" line
+        });
+
+        $('#sr3d_table').DataTable({
+            columnDefs: [ // disable sorting of the first column
+                {orderable: false, targets: 0}
+            ],
+            "order": [[1, "desc"]], // Default Ordering on the overall column
+            searching: false, // Disable search bar
+            paging: false, // Stop pagination for now
+            info: false // hide "Showing 1 to M of N entries" line
+        });
+    })
+</script>
 </html>
