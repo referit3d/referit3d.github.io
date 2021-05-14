@@ -167,29 +167,32 @@
     <div class="row " id="intro" style="padding-bottom:30px">
         <div class="col-md-10 col-md-offset-1">
             <h2 class="">
-                <b>Intro and Rules</b>
+                <b>Intro</b>
             </h2>
-            We are interested in reporting the capacity of different approaches in identifying a 3D object based on
-            referential language. To this end we use the same benchmark, and look at the same angles we investigated in
-            the <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf"> ReferIt3D paper</a>.
+            With the ReferIt3D benchmarks we wish to <u>aggregate</u> and report the progress that is happening in the emerging field of 3D language assisted understanding and learning. To this end, we investigate the same fundamental questions present in the <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf"> ReferIt3D paper</a>.
             <br><br>
-            Namely we consider:
+            Specifically we consider:
             <ul>
-                <li>How well a method works when the input language is Natural (<a href="#benchmark-nr3d"><i>Nr3D
-                    challenge</i></a>) <strong>vs.</strong> Synthetic concerning only spatial-relations (<a
+                <li>How well a method works when the input language is <strong>Natural</strong> (<a href="#benchmark-nr3d"><i>Nr3D
+                    challenge</i></a>) <i>vs.</i> Template-based concerning <i>only</i> <strong>Spatial-relations</strong> (<a
                         href="#benchmark-sr3d"><i>Sr3D challenge</i></a>)?
                 </li>
-                <li>How well a method works when the number of same fine-grained instances present in a scene and
-                    referred in language are exactly two (<i>Easy</i> case, e.g., 2 office-chairs) <strong>vs.</strong>
-                    when the number of such distractors is larger (<i>Hard</i> case)
-                </li>
-                <li>How well a method works when the linguistic reference makes use of <i>View-Dependent</i>
-                    expressions, e.g., <i>"Facing the couch... on the right side"</i>, <strong>vs.</strong> <i>View-Independent</i>
-                    ones e.g., <i>"the nightstand between the bed and the curtain"</i>.
+                <li>How is a method affected when we vary the number of <i>same-to-the-target-class</i> distracting instances in a scene? E.g., when handling an <strong>"Easy"</strong> case, where exactly 1 such distractor co-exists with the target <i>vs.</i> a <strong>"Hard"</strong> case, where there are more distractors?
+                </li> 
+                <li>Another fundamental angle, concerns the use of language in terms reference making that is <strong>View-Dependent</strong> e.g., <i>"Facing the couch... on the right side"</i>, <i>vs.</i> being <strong>View-Independent</strong> e.g., <i>"the nightstand between the bed and the curtain"</i>.
                 </li>
             </ul>
+            In a nutshell, these axis/questions regarding the 3D reference problem aim to <u>disentangle</u> the performance-characteristics of different approached as explained in the  <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf"> ReferIt3D paper</a>. 
+            Our reported results (Tables below) and provided training/test data explore them further.
+        </div>
+    </div>
 
-
+    <div class="row " id="rules" style="padding-bottom:30px">
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class="">
+                <b>Rules</b>
+            </h2>
+            In short, please use our published datasets (<a href="https://drive.google.com/file/d/1qswKclq4BlnHSGMSgzLmUu8iqdUXD8ZC/view">Nr3D</a>, <a href="https://drive.google.com/drive/folders/1DS4uQq7fCmbJHeE-rEbO8G1-XatGEqNV">Sr3D</a>) following the official ScanNet train/val splits. Since in these benchmarks we tackle the reference problem among <strong>all</strong> objects in a scene (and not only among the same-class distractors), for Nr3D use only the utterances where the target-class is mentioned (mentions_target_class = True) and which where guesses correctly by the human listener (correct_guess=True).            
         </div>
     </div>
 
