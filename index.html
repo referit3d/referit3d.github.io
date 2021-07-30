@@ -119,32 +119,30 @@
             </h3>
             <hr>
             <p class="text-justify">
-                In this work we study the problem of using referential language to identify common objects in
+                In this work we <b>introduce</b> the problem of using referential <b>language</b> to identify common <b>objects</b> in
                 real-world
-                3D scenes. We focus on a challenging setup where the referred object belongs to a fine-grained
+                <b>3D</b> scenes. We focus on a challenging setup where the referred object belongs to a <i>fine-grained</i>
                 object
-                class and the underlying scene contains multiple object instances of that class. Due to the scarcity
+                class and the underlying scene contains <b>multiple</b> object instances of that class. Due to the scarcity
                 and
                 unsuitability of existent 3D-oriented linguistic resources for this task, we first develop two
-                large-scale and complementary visio-linguistic datasets: i) Sr3D, which contains 83.5K
+                large-scale and complementary visio-linguistic datasets: i) Sr3D, which contains <b>83.5K</b>
                 template-based
                 utterances leveraging spatial relations among fine-grained object classes to localize a referred
                 object
-                in a scene, and ii) Nr3D which contains 41.5K natural, free-form, utterances collected by deploying
+                in a scene, and ii) Nr3D which contains <b>41.5K</b> natural, free-form, utterances collected by deploying
                 a
                 2-player object reference game in 3D scenes. Using utterances of either datasets, human listeners
                 can
                 recognize the referred object with high (>86%, 92% resp.) accuracy. By tapping on the introduced
                 data,
-                we develop novel neural listeners that can comprehend object-centric natural language and identify
-                the referred
-                object directly in a 3D scene. Our key technical contribution is designing an approach for combining
+                we develop novel <i>neural listeners</i> that can comprehend object-centric natural language and identify
+                the referred object <b>directly</b> in a 3D scene. A key technical contribution is designing an approach for combining
                 linguistic and geometric information (in the form of 3D point clouds) and creating multi-modal (3D)
-                neural listeners. We also show that architectures which promote object-to-object communication via
-                graph
-                neural networks outperform less context-aware alternatives, and that fine-grained object
+                neural listeners. Importantly, we show that architectures which promote object-to-object communication via
+                graph neural networks outperform context-unaware alternatives, and that fine-grained object
                 classification
-                is a bottleneck for language-assisted 3D object identification.
+                is a <b>significant</b> bottleneck for language-assisted 3D object identification.
             </p>
         </div>
     </div>
@@ -179,7 +177,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h4 class="">
-                        <i><b>I.</b> You focus on contrasting explicitly objects of the same <b>fine-grained</b> object
+                        <i><b>I.</b> You contrast explicitly objects of the same fine-grained object
                             class <b>only</b>.<a style="color:red;"><i> <b>Why?</b></i></a></i>
                     </h4>
 
@@ -193,11 +191,7 @@
                     </figure>
 
                     <p  class="text-justify">
-                         <a style="color:green;"><b>Because</b></a> it enables the human (or neural) speaker to use <u><b>minimal</b></u> details to disambiguate the “Target,”
-                        thus it promotes the use of <b>efficient & fine-grained</b> Visio-linguistic reference.
-                        If you compare an armchair chair to another target chair, an office chair, you can denote “the office chair.”
-                        Also, the <b>explicit</b> bounding boxes that include the contrasting context help an annotator <b>focus</b> on the task,
-                        especially since the ScanNet 3D/Point-Cloud reconstructions are far from smooth.
+                         <a style="color:green;"><b>Because</b></a> this enables the human (or neural) speakers to use <b>minimal</b> details to disambiguate the “target” object, fostering the production of <b>efficient & fine-grained</b> references. Put it simple, if you contrast an armchair to a target office-chair, you can trivially utter: “the office chair”. Furthemore, the inclusion of <b>explicit</b> bounding boxes that surround the contrasting objects helps our annotators <b>focus</b> on the task, especially since the ScanNet 3D reconstructions are far from noise-free.
                     </p>
 
                 </div>
@@ -216,7 +210,7 @@
                     </h4>
 
                     <p  class="text-justify">
-                         <a style="color:green;"><b>Because</b></a> similarly to the above, this forces the reference to <u><b>go beyond</b></u> fine-grained or
+                         <a style="color:green;"><b>Because</b></a> similarly to the above, this forces the reference to <b>go beyond</b> fine-grained or
                         simple-object classification! I.e., if the target is the only refrigerator of the scene, the
                         reference: “the refrigerator” is good enough, no?
                     </p>
@@ -246,9 +240,9 @@
                     </figure>
 
                     <p  class="text-justify">
-                        <a style="color:green;"><b>Because</b></a> as we verified in Nr3D, spatial-reasoning ("left of," "between," etc. See the above figure) is  <u><b>ubiquitous</b></u>  in natural reference.
+                        <a style="color:green;"><b>Because</b></a> as we verified in Nr3D, spatial-reasoning ("left of," "between," etc.) is <b>ubiquitous</b> in natural reference.
                         Sr3D focuses on that aspect <b>only</b> — <b>disentangling</b> the reference problem nicely from other object properties such as their color or shape.
-                        Also, even (naively) combining Sr3D with Nr3D in the training mix improved the listeners' performance in natural language!
+                        Also, even (naively) adding Sr3D to Nr3D in the training data improves the listeners' performance in comprehending natural language!
                     </p>
 
                 </div>
@@ -262,8 +256,8 @@
                     <br>
                     <br>
                     <h4 class="">
-                        <i><b>IV. </b>  Are all scenes, language, contrasting-contexts qualitatively about the same? Or, there are
-                            important intrinsic differences among them?</i>
+                        <i><b>IV. </b>  Are all contrasting-contexts and produced language qualitatively about the same? Or, there are
+                            important intrinsic <b>differences</b> among them?</i>
                     </h4>
 
                     <figure>
@@ -276,12 +270,11 @@
                     </figure>
 
                     <p  class="text-justify">
-                        No, they are not the same. For instance, you might contrast a lamp with a single lamp or with four of them (see the above Figure, “easy” vs. “hard”).
-                        Or, you can use in your language enough elements that allow another person (or a robot!) to find the target item among all (!) objects of the scene,
-                        making the reference—object pair “Scene-Discoverable” (the references that have a “tick” on the SD). Last, it is different from uttering an object-reference
-                        having a specific view in mind, e.g., “The lamp on the right, in between the beds,” which implies that the listener needs to find the front-face of the bed Vs.
+                        No, they are not the same. For instance, you might contrast a lamp with a single lamp or with four of them (compare 
+                        “easy” vs. “hard” in above Figure). Or, you can use in your language enough elements that allow another person (or a robot) to find the target item among all (!) objects of the scene,
+                        making the reference—object pair “<b>S</b>cene-<b>D</b>iscoverable” (in Fig. see references that have a “tick” under  <b>SD</b>). Last, it is different from uttering an object-reference having a specific view in mind, e.g., “The lamp on the right, in between the beds,” which implies that the listener needs to find the front-face of the bed Vs.
                         Making a reference like “The lamp closer to the white armchair,” which in theory only requires one to pinpoint the armchair without caring about its
-                        front-back views. I.e., it is view-independent (“VI”).
+                        front-back views. I.e., it is view-independent (<b>VI</b>).
                     </p>
 
                 </div>
@@ -305,12 +298,12 @@
                 </li>
             </ul>
             <h4 style="text-align: center;">
-                <b>Browse</b>
+                <b>Browsers</b>
             </h4>
             <ul>
-                <li> You can <strong>explore</strong> the Nr3D and Sr3D utterances inside the 3D ScanNet Scenes here
-                    (<a href="./data_browser.html">Nr3D browser</a>, <a href="./sr_data_browser.html"> Sr3D
-                        browser</a>).
+                <li> You can <strong>explore</strong> the Nr3D and Sr3D utterances inside the 3D ScanNet Scenes here:
+                    <a href="./data_browser.html">Nr3D browser</a>, <a href="./sr_data_browser.html"> Sr3D
+                        browser</a>.
                 </li>
                 <br>
                 <br>
