@@ -26,154 +26,160 @@
 </head>
 
 <body>
-<div class="container" id="main">
-    <div class="row">
+    <div class="container" id="main">
+        <div class="row">
 
-        <h2 class="col-md-12 text-center" style="padding-bottom:20px">
+            <h2 class="col-md-12 text-center" style="padding-bottom:20px">
 
-            <b>ReferIt3D: Neural Listeners for Fine-Grained<br>3D Object Identification in Real-World
-                Scenes</br></b>
-            <span style="font-size:18pt"> ECCV 2020, Oral </span>
-            <br>
-        </h2>
-
-    </div>
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <ul class="list-inline" style="font-size:18pt">
-                <li>
-                    <a href="http://optas.github.io">
-                        Panos Achlioptas
-                    </a>
-                    </br>Stanford University
-                </li>
-                <li>
-                    <a href="http://aabdelreheem.me">
-                        Ahmed Abdelreheem
-                    </a>
-                    </br>KAUST
-                </li>
-                <li>
-                    <a href="http://fxia.me/">
-                        Fei Xia
-                    </a>
-                    </br>Stanford University
-                </li>
-
+                <b>ReferIt3D: Neural Listeners for Fine-Grained<br>3D Object Identification in Real-World
+                    Scenes</br></b>
+                <span style="font-size:18pt"> ECCV 2020, Oral </span>
                 <br>
-
-                <li>
-                    <a href="http://www.mohamed-elhoseiny.com/">
-                        Mohamed Elhoseiny
-                    </a>
-                    </br>Stanford University, KAUST
-                </li>
-                <li>
-                    <a href="https://geometry.stanford.edu/member/guibas/">
-                        Leonidas Guibas
-                    </a>
-                    </br>Stanford University
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="row" style="padding-top:45px">
-        <div class="col-md-6 col-md-offset-3 text-center">
-            <ul class="nav nav-pills nav-justified">
-                <li>
-                    <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf">
-                        <h4><strong>[Paper]</strong></h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="#video">
-                        <h4><strong>[Video]</strong></h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/referit3d/referit3d">
-                        <h4><strong>[Code]</strong></h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="#dataset">
-                        <h4><strong>[Dataset]</strong></h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="#benchmarks">
-                        <h4><strong>[Benchmarks]</strong></h4>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="row" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>Abstract</b>
-            </h3>
-            <hr>
-            <p class="text-justify">
-                In this work we <b>introduce</b> the problem of using referential <b>language</b> to identify common <b>objects</b> in
-                real-world
-                <b>3D</b> scenes. We focus on a challenging setup where the referred object belongs to a <i>fine-grained</i>
-                object
-                class and the underlying scene contains <b>multiple</b> object instances of that class. Due to the scarcity
-                and
-                unsuitability of existent 3D-oriented linguistic resources for this task, we first develop two
-                large-scale and complementary visio-linguistic datasets: i) Sr3D, which contains <b>83.5K</b>
-                template-based
-                utterances leveraging spatial relations among fine-grained object classes to localize a referred
-                object
-                in a scene, and ii) Nr3D which contains <b>41.5K</b> natural, free-form, utterances collected by deploying
-                a
-                2-player object reference game in 3D scenes. Using utterances of either datasets, human listeners
-                can
-                recognize the referred object with high (>86%, 92% resp.) accuracy. By tapping on the introduced
-                data,
-                we develop novel <i>neural listeners</i> that can comprehend object-centric natural language and identify
-                the referred object <b>directly</b> in a 3D scene. A key technical contribution is designing an approach for combining
-                linguistic and geometric information (in the form of 3D point clouds) and creating multi-modal (3D)
-                neural listeners. Importantly, we show that architectures which promote object-to-object communication via
-                graph neural networks outperform context-unaware alternatives, and that fine-grained object
-                classification
-                is a <b>significant</b> bottleneck for language-assisted 3D object identification.
-            </p>
-        </div>
-    </div>
-
-
-    <div class="row" id="video" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>Video</b>
-            </h3>
-            <hr>
-            <!--            <video id="v0" width="100%" loop="" muted="" controls="">-->
-            <!--                <source src="img/hi_res.mp4" type="video/mp4">-->
-            <!--            </video>-->
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/yEdf24hF_sY">
-            </iframe>
+            </h2>
 
         </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline" style="font-size:18pt">
+                    <li>
+                        <a href="http://optas.github.io">
+                            Panos Achlioptas
+                        </a>
+                        </br>Stanford University
+                    </li>
+                    <li>
+                        <a href="http://aabdelreheem.me">
+                            Ahmed Abdelreheem
+                        </a>
+                        </br>KAUST
+                    </li>
+                    <li>
+                        <a href="http://fxia.me/">
+                            Fei Xia
+                        </a>
+                        </br>Stanford University
+                    </li>
 
-    </div>
+                    <br>
 
-    <div class="row" id="intuitions" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>Overview & Intuitions</b>
-            </h3>
-            <hr>
+                    <li>
+                        <a href="http://www.mohamed-elhoseiny.com/">
+                            Mohamed Elhoseiny
+                        </a>
+                        </br>Stanford University, KAUST
+                    </li>
+                    <li>
+                        <a href="https://geometry.stanford.edu/member/guibas/">
+                            Leonidas Guibas
+                        </a>
+                        </br>Stanford University
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Question 1-->
-        <section>
+
+        <div class="row" style="padding-top:45px">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf">
+                            <h4><strong>[Paper]</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#video">
+                            <h4><strong>[Video]</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/referit3d/referit3d">
+                            <h4><strong>[Code]</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#dataset">
+                            <h4><strong>[Dataset]</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#benchmarks">
+                            <h4><strong>[Benchmarks]</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>Abstract</b>
+                </h3>
+                <hr>
+                <p class="text-justify">
+                    In this work we <b>introduce</b> the problem of using referential <b>language</b> to identify common
+                    <b>objects</b> in
+                    real-world
+                    <b>3D</b> scenes. We focus on a challenging setup where the referred object belongs to a
+                    <i>fine-grained</i>
+                    object
+                    class and the underlying scene contains <b>multiple</b> object instances of that class. Due to the
+                    scarcity
+                    and
+                    unsuitability of existent 3D-oriented linguistic resources for this task, we first develop two
+                    large-scale and complementary visio-linguistic datasets: i) Sr3D, which contains <b>83.5K</b>
+                    template-based
+                    utterances leveraging spatial relations among fine-grained object classes to localize a referred
+                    object
+                    in a scene, and ii) Nr3D which contains <b>41.5K</b> natural, free-form, utterances collected by
+                    deploying
+                    a
+                    2-player object reference game in 3D scenes. Using utterances of either datasets, human listeners
+                    can
+                    recognize the referred object with high (>86%, 92% resp.) accuracy. By tapping on the introduced
+                    data,
+                    we develop novel <i>neural listeners</i> that can comprehend object-centric natural language and
+                    identify
+                    the referred object <b>directly</b> in a 3D scene. A key technical contribution is designing an
+                    approach for combining
+                    linguistic and geometric information (in the form of 3D point clouds) and creating multi-modal (3D)
+                    neural listeners. Importantly, we show that architectures which promote object-to-object
+                    communication via
+                    graph neural networks outperform context-unaware alternatives, and that fine-grained object
+                    classification
+                    is a <b>significant</b> bottleneck for language-assisted 3D object identification.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row" id="video" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>Video</b>
+                </h3>
+                <hr>
+                <!--            <video id="v0" width="100%" loop="" muted="" controls="">-->
+                <!--                <source src="img/hi_res.mp4" type="video/mp4">-->
+                <!--            </video>-->
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/yEdf24hF_sY">
+                </iframe>
+
+            </div>
+
+        </div>
+
+        <div class="row" id="intuitions" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>Overview & Intuitions</b>
+                </h3>
+                <hr>
+            </div>
+
+            <!-- Question 1-->
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h4 class="">
@@ -181,257 +187,291 @@
                             class <b>only</b>.<a style="color:red;"><i> <b>Why?</b></i></a></i>
                     </h4>
 
-                    <figure>
-
-                        <img src="img/fig1.png"
-                             style="padding-bottom:1vh; padding-left: 3vw; height: 30vh; align-content: center"
-                             class="img-responsive" alt="overview">
+                    <div class="col-md-12">
+                        <figure></figure>
+                        <img src="img/fig1.png" style="padding-bottom:10px; align-content: center"
+                            class="img-responsive" alt="overview">
                         <figcaption>
                         </figcaption>
-                    </figure>
+                        </figure>
+                    </div>
 
-                    <p  class="text-justify">
-                         <a style="color:green;"><b>Because</b></a> this enables the human (or neural) speakers to use <b>minimal</b> details to disambiguate the “target” object, fostering the production of <b>efficient & fine-grained</b> references. Put it simple, if you contrast an armchair to a target office-chair, you can trivially utter: “the office chair”. Furthemore, the inclusion of <b>explicit</b> bounding boxes that surround the contrasting objects helps our annotators <b>focus</b> on the task, especially since the ScanNet 3D reconstructions are far from noise-free.
-                    </p>
+                    <div class="col-md-12">
+                        <p class="text-justify">
+                            <a style="color:green;"><b>Because</b></a> this enables the human (or neural) speakers
+                            to use <b>minimal</b> details to disambiguate the “target” object, fostering the
+                            production of <b>efficient & fine-grained</b> references. Put it simple, if you contrast
+                            an armchair to a target office-chair, you can trivially utter: “the office chair”.
+                            Furthemore, the inclusion of <b>explicit</b> bounding boxes that surround the
+                            contrasting objects helps our annotators <b>focus</b> on the task, especially since the
+                            ScanNet 3D reconstructions are far from noise-free.
+                        </p>
+                    </div>
 
                 </div>
             </div>
-        </section>
 
-        <!-- Question 2-->
-        <section>
+
+            <!-- Question 2-->
+
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <br>
                     <br>
                     <h4 class="">
-                        <i><b>II.</b> You contrast objects for which <b>at least one</b> same-fine-grained distractor exists in
+                        <i><b>II.</b> You contrast objects for which <b>at least one</b> same-fine-grained
+                            distractor exists in
                             the scene. <a style="color:red;"><i> <b>Why?</b></i></a></i>
                     </h4>
-
-                    <p  class="text-justify">
-                         <a style="color:green;"><b>Because</b></a> similarly to the above, this forces the reference to <b>go beyond</b> fine-grained or
-                        simple-object classification! I.e., if the target is the only refrigerator of the scene, the
-                        reference: “the refrigerator” is good enough, no?
-                    </p>
-
+                    <div class="col-md-12">
+                        <p class="text-justify">
+                            <a style="color:green;"><b>Because</b></a> similarly to the above, this forces the
+                            reference
+                            to <b>go beyond</b> fine-grained or
+                            simple-object classification! I.e., if the target is the only refrigerator of the scene,
+                            the
+                            reference: “the refrigerator” is good enough, no?
+                        </p>
+                    </div>
                 </div>
             </div>
-        </section>
 
 
-        <!-- Question 3-->
-        <section>
+
+            <!-- Question 3-->
+
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <br>
                     <br>
+
                     <h4 class="">
-                        <i><b>III.</b> You collected a large dataset, Nr3D which natural language. <a style="color:red;"><i> <b>Why&nbsp;</b></i></a></i> bother making also a
-                            synthetic one focusing on spatial-relations?
+                        <i><b>III.</b> You collected a large dataset, Nr3D which natural language. <a
+                                style="color:red;"><i> <b>Why&nbsp;</b></i></a></i> bother making also a
+                        synthetic one focusing on spatial-relations?
                     </h4>
 
-                    <figure>
-                        <img src="img/ezgif.com-gif-maker.gif"
-                             style="padding-bottom:1vh; padding-left: 7vw; height: 30vh; align-content: center"
-                             class="img-responsive" alt="overview">
-                        <figcaption>
-                        </figcaption>
-                    </figure>
+                    <div class="col-md-8 col-md-offset-2">
+                        <figure>
+                            <img src="img/ezgif.com-gif-maker.gif" style="padding-bottom:10px;"
+                                class="img-responsive" alt="overview">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </div>
 
-                    <p  class="text-justify">
-                        <a style="color:green;"><b>Because</b></a> as we verified in Nr3D, spatial-reasoning ("left of," "between," etc.) is <b>ubiquitous</b> in natural reference.
-                        Sr3D focuses on that aspect <b>only</b> — <b>disentangling</b> the reference problem nicely from other object properties such as their color or shape.
-                        Also, even (naively) adding Sr3D to Nr3D in the training data improves the listeners' performance in comprehending natural language!
-                    </p>
+                    <div class="col-md-12">
+                        <p class="text-justify">
+                            <a style="color:green;"><b>Because</b></a> as we verified in Nr3D, spatial-reasoning
+                            ("left
+                            of," "between," etc.) is <b>ubiquitous</b> in natural reference.
+                            Sr3D focuses on that aspect <b>only</b> — <b>disentangling</b> the reference problem
+                            nicely
+                            from other object properties such as their color or shape.
+                            Also, even (naively) adding Sr3D to Nr3D in the training data improves the listeners'
+                            performance in comprehending natural language!
+                        </p>
+                    </div>
 
                 </div>
             </div>
-        </section>
 
-        <!-- Question 4-->
-        <section>
+
+            <!-- Question 4-->
+
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <br>
                     <br>
                     <h4 class="">
-                        <i><b>IV. </b>  Are all contrasting-contexts and produced language qualitatively about the same? Or, there are
+                        <i><b>IV. </b> Are all contrasting-contexts and produced language qualitatively about the
+                            same? Or, there are
                             important intrinsic <b>differences</b> among them?</i>
                     </h4>
+                    <div class="col-md-12">
+                        <figure>
 
-                    <figure>
-
-                        <img src="img/fig3.png"
-                             style="padding-bottom:1vh; padding-left: 1vw; height: 30vh; align-content: center"
-                             class="img-responsive" alt="overview">
-                        <figcaption>
-                        </figcaption>
-                    </figure>
-
-                    <p  class="text-justify">
-                        No, they are not the same. For instance, you might contrast a lamp with a single lamp or with four of them (compare 
-                        “easy” vs. “hard” in above Figure). Or, you can use in your language enough elements that allow another person (or a robot) to find the target item among all (!) objects of the scene,
-                        making the reference—object pair “<b>S</b>cene-<b>D</b>iscoverable” (in Fig. see references that have a “tick” under  <b>SD</b>). Last, it is different from uttering an object-reference having a specific view in mind, e.g., “The lamp on the right, in between the beds,” which implies that the listener needs to find the front-face of the bed Vs.
-                        Making a reference like “The lamp closer to the white armchair,” which in theory only requires one to pinpoint the armchair without caring about its
-                        front-back views. I.e., it is view-independent (<b>VI</b>).
-                    </p>
+                            <img src="img/fig3.png"
+                                style="padding-bottom:10px;"
+                                class="img-responsive" alt="overview">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="text-justify">
+                            No, they are not the same. For instance, you might contrast a lamp with a single lamp or
+                            with four of them (compare
+                            “easy” vs. “hard” in above Figure). Or, you can use in your language enough elements that
+                            allow another person (or a robot) to find the target item among all (!) objects of the
+                            scene,
+                            making the reference—object pair “<b>S</b>cene-<b>D</b>iscoverable” (in Fig. see references
+                            that have a “tick” under <b>SD</b>). Last, it is different from uttering an object-reference
+                            having a specific view in mind, e.g., “The lamp on the right, in between the beds,” which
+                            implies that the listener needs to find the front-face of the bed Vs.
+                            Making a reference like “The lamp closer to the white armchair,” which in theory only
+                            requires one to pinpoint the armchair without caring about its
+                            front-back views. I.e., it is view-independent (<b>VI</b>).
+                        </p>
+                    </div>
 
                 </div>
             </div>
-        </section>
-    </div>
+
+        </div>
 
 
-    <div class="row" id="dataset" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>Dataset</b>
-            </h3>
-            <hr>
-            <ul>
-                <li> You can download Nr3D <a
-                        href="https://drive.google.com/file/d/1qswKclq4BlnHSGMSgzLmUu8iqdUXD8ZC/view">here</a>
-                    (10.7MB) and Sr3D/Sr3D+ <a
+        <div class="row" id="dataset" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>Dataset</b>
+                </h3>
+                <hr>
+                <ul>
+                    <li> You can download Nr3D <a
+                            href="https://drive.google.com/file/d/1qswKclq4BlnHSGMSgzLmUu8iqdUXD8ZC/view">here</a>
+                        (10.7MB) and Sr3D/Sr3D+ <a
                             href="https://drive.google.com/drive/folders/1DS4uQq7fCmbJHeE-rEbO8G1-XatGEqNV">here</a>
-                    (19MB / 20MB).
-                </li>
-            </ul>
-            <h4 style="text-align: center;">
-                <b>Browsers</b>
-            </h4>
-            <ul>
-                <li> You can <strong>explore</strong> the Nr3D and Sr3D utterances inside the 3D ScanNet Scenes here:
-                    <a href="./data_browser.html">Nr3D browser</a>, <a href="./sr_data_browser.html"> Sr3D
-                        browser</a>.
-                </li>
+                        (19MB / 20MB).
+                    </li>
+                </ul>
+                <h4 style="text-align: center;">
+                    <b>Browsers</b>
+                </h4>
+                <ul>
+                    <li> You can <strong>explore</strong> the Nr3D and Sr3D utterances inside the 3D ScanNet Scenes
+                        here:
+                        <a href="./data_browser.html">Nr3D browser</a>, <a href="./sr_data_browser.html"> Sr3D
+                            browser</a>.
+                    </li>
+                    <br>
+                    <br>
+                    <figure>
+                        <img src="img/browser.gif" style="padding-bottom:10px; padding-left: 2vw" class="img-responsive"
+                            alt="overview">
+                        <figcaption>
+                        </figcaption>
+                    </figure>
+                </ul>
+
                 <br>
-                <br>
-                 <figure>
-                <img src="img/browser.gif" style="padding-bottom:10px; padding-left: 2vw" class="img-responsive" alt="overview">
-                <figcaption>
-                </figcaption>
-            </figure>
-            </ul>
-
-            <br>
-        </div>
-    </div>
-
-    <div class="row" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>Method: ReferIt3DNet</b>
-            </h3>
-            <hr>
+            </div>
         </div>
 
-        <div class="col-md-8 col-md-offset-2">
-            <figure>
-                <img src="img/method.png" style="padding-bottom:10px" class="img-responsive" alt="overview">
-                <figcaption>
-                </figcaption>
-            </figure>
+        <div class="row" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>Method: ReferIt3DNet</b>
+                </h3>
+                <hr>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2">
+                <figure>
+                    <img src="img/method.png" style="padding-bottom:10px" class="img-responsive" alt="overview">
+                    <figcaption>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2">
+                Each object of a 3D scene, represented as a 6D point cloud containing its xyz coordinates and RGB color,
+                is encoded by a visual encoder (e.g., PointNet++), with shared weights. Simultaneously, the utterance
+                describing the referred object (e.g., “<i>the armchair next to the whiteboard</i>”) is processed by a
+                Recurrent Neural
+                Network (RNN). The resulting representations are fused together and processed by a Dynamic Graph
+                Convolution
+                Network (DGCN) which creates an object-centric <i>and</i> scene- (context-) aware representation per
+                object.
+                The output of the DGCN is processed by an MLP classifier that estimates the likelihood of each object to
+                be
+                the referred one. Two auxiliary losses modulate the unfused representations before these are processed
+                by the DGCN
+                via an object-class classifier and a text classifier respectively.
+            </div>
         </div>
 
-        <div class="col-md-8 col-md-offset-2">
-            Each object of a 3D scene, represented as a 6D point cloud containing its xyz coordinates and RGB color,
-            is encoded by a visual encoder (e.g., PointNet++), with shared weights. Simultaneously, the utterance
-            describing the referred object (e.g., “<i>the armchair next to the whiteboard</i>”) is processed by a
-            Recurrent Neural
-            Network (RNN). The resulting representations are fused together and processed by a Dynamic Graph
-            Convolution
-            Network (DGCN) which creates an object-centric <i>and</i> scene- (context-) aware representation per
-            object.
-            The output of the DGCN is processed by an MLP classifier that estimates the likelihood of each object to
-            be
-            the referred one. Two auxiliary losses modulate the unfused representations before these are processed
-            by the DGCN
-            via an object-class classifier and a text classifier respectively.
-        </div>
-    </div>
 
+        <div class="row" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>Qualitative Results</b>
+                </h3>
+                <hr>
+            </div>
 
-    <div class="row" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>Qualitative Results</b>
-            </h3>
-            <hr>
-        </div>
+            <div class="col-md-8 col-md-offset-2">
+                <figure>
+                    <img src="img/listener_qualitative_res.png" style="padding-bottom:10px" class="img-responsive"
+                        alt="overview">
+                    <figcaption>
+                    </figcaption>
+                </figure>
+            </div>
 
-        <div class="col-md-8 col-md-offset-2">
-            <figure>
-                <img src="img/listener_qualitative_res.png" style="padding-bottom:10px" class="img-responsive"
-                     alt="overview">
-                <figcaption>
-                </figcaption>
-            </figure>
+            <div class="col-md-8 col-md-offset-2">
+                Successful cases of applying <b><i>ReferIt3DNet</i></b> are shown in the top four images and failure
+                ones in the bottom two. Targets are shown in <span style="color:green">green</span> boxes, intra-class
+                distractors in <span style="color:red">red</span>, and the referential text is displayed under each
+                image.
+                The network predictions are shown inside dashed <span style="color:yellow">yellow</span> circles, along
+                with the
+                inferred probabilities. We omit the probabilities of inter-class distractors to ease the presentation.
+            </div>
         </div>
 
-        <div class="col-md-8 col-md-offset-2">
-            Successful cases of applying <b><i>ReferIt3DNet</i></b> are shown in the top four images and failure
-            ones in the bottom two. Targets are shown in <span style="color:green">green</span> boxes, intra-class
-            distractors in <span style="color:red">red</span>, and the referential text is displayed under each
-            image.
-            The network predictions are shown inside dashed <span style="color:yellow">yellow</span> circles, along
-            with the
-            inferred probabilities. We omit the probabilities of inter-class distractors to ease the presentation.
-        </div>
-    </div>
-
-    <div class="row" id="citation" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>Citation</b>
-            </h3>
-            <hr>
-            If you find our work useful in your research, please consider citing:
-            <pre class="w4-panel w4-centerbar w4-light-grey" style="font-size: 11px">
+        <div class="row" id="citation" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>Citation</b>
+                </h3>
+                <hr>
+                If you find our work useful in your research, please consider citing:
+                <pre class="w4-panel w4-centerbar w4-light-grey" style="font-size: 11px">
 @inproceedings{achlioptas2020referit_3d,
     title={{ReferIt3D}: Neural Listeners for Fine-Grained 3D Object Identification in Real-World Scenes},
     author={Achlioptas, Panos and Abdelreheem, Ahmed and Xia, Fei and Elhoseiny, Mohamed and Guibas, Leonidas J.},
     booktitle={16th European Conference on Computer Vision (ECCV)},
     year={2020}
 }</pre>
-        </div>
-    </div>
-
-    <div class="row" id="benchmarks" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>ReferIt3D Benchmark Challenges</b>
-            </h3>
-            <hr>
-            We wish to <i>aggregate and highlight</i> results from different approaches tackling the problem of
-            fine-grained 3D object identification via language. If you use either of our datasets with a new method,
-            please let us know! so we can <u>add your method</u> and attained results in our <a
-                href="./benchmarks.html"> benchmark-aggregating page</a>.
+            </div>
         </div>
 
-    </div>
+        <div class="row" id="benchmarks" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>ReferIt3D Benchmark Challenges</b>
+                </h3>
+                <hr>
+                We wish to <i>aggregate and highlight</i> results from different approaches tackling the problem of
+                fine-grained 3D object identification via language. If you use either of our datasets with a new method,
+                please let us know! so we can <u>add your method</u> and attained results in our <a
+                    href="./benchmarks.html"> benchmark-aggregating page</a>.
+            </div>
 
-
-    <div class="row" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 style="text-align: center;">
-                <b>Acknowledgements</b>
-            </h3>
-            <hr>
-            <p class="text-justify">
-                The authors wish to acknowledge the support of a Vannevar Bush Faculty Fellowship, a grant from the
-                Samsung GRO program, and the Stanford SAIL Toyota Research Center, NSF grant IIS-1763268, KAUST
-                grant BAS/1/1685-01-01, and a research gift from Amazon Web Services. They also want to thank Iro
-                Armeni, Angel X. Chang, and Jiayun Wang for inspiring discussions and their help in bringing this
-                project to fruition. Last but not least, they want to express their gratitude to the wonderful
-                Turkers of Amazon Mechanical Turk, whose help in curating the introduced datasets was paramount.
-            </p>
         </div>
+
+
+        <div class="row" style="padding-bottom:30px">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="text-align: center;">
+                    <b>Acknowledgements</b>
+                </h3>
+                <hr>
+                <p class="text-justify">
+                    The authors wish to acknowledge the support of a Vannevar Bush Faculty Fellowship, a grant from the
+                    Samsung GRO program, and the Stanford SAIL Toyota Research Center, NSF grant IIS-1763268, KAUST
+                    grant BAS/1/1685-01-01, and a research gift from Amazon Web Services. They also want to thank Iro
+                    Armeni, Angel X. Chang, and Jiayun Wang for inspiring discussions and their help in bringing this
+                    project to fruition. Last but not least, they want to express their gratitude to the wonderful
+                    Turkers of Amazon Mechanical Turk, whose help in curating the introduced datasets was paramount.
+                </p>
+            </div>
+        </div>
+
+
     </div>
-
-
-</div>
-<script type='text/javascript' id='clustrmaps'
+    <script type='text/javascript' id='clustrmaps'
         src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=110&t=tt&d=_kJ7hJdlh3UTdIJueDububmhQbOOTRZpo-A1RUHuEqU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
 </body>
 
