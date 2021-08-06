@@ -191,7 +191,28 @@
             <h2 class="">
                 <b>Rules</b>
             </h2>
-            Please use our published datasets (<a href="https://drive.google.com/file/d/1qswKclq4BlnHSGMSgzLmUu8iqdUXD8ZC/view">Nr3D</a>, <a href="https://drive.google.com/drive/folders/1DS4uQq7fCmbJHeE-rEbO8G1-XatGEqNV">Sr3D</a>) following the official ScanNet train/val splits. Since in these benchmarks we tackle the identification problem among <strong>all</strong> objects in a scene (and not only among the same-class distractors), when using the Nr3D make sure to use only the utterances where the target-class is explicitly mentioned (mentions_target_class=True) and which where guessed correctly by the human listener (correct_guess=True).
+            Please use our published datasets following the official ScanNet train/val splits. Since in these benchmarks we tackle the identification problem among <strong>all</strong> objects in a scene (and not only among the same-class distractors), when using the Nr3D make sure to use only the utterances where the target-class is explicitly mentioned (mentions_target_class=True) and which where guessed correctly by the human listener (correct_guess=True).
+
+            <br>
+            <br>
+            
+            To download the pre-processed datasets that reflect exactly the same input we gave to our proposed network (where the filters mentioned above are pre-applied), use the following links:
+            
+            <div class="col-md-offset-1">
+                <li><a href="https://drive.google.com/file/d/1ZHWSUOU1VeTmv3fRw6sW1geNKCyHs2El/view?usp=sharing">Nr3D training set</a></li>
+                <li><a href="https://drive.google.com/file/d/1ighHYVX6CzmMYS-FAbRg8liGkaHlM14s/view?usp=sharing">Nr3D test set</a></li>
+                <li><a href="https://drive.google.com/file/d/1d40EfJsH0sskpYlU5cdxKJYqZi677kT4/view?usp=sharing">Sr3D training set</a></li>
+                <li><a href="https://drive.google.com/file/d/1mns9KAZeTwXzsP4x1qjO-WPqPzx1Np1M/view?usp=sharing">Sr3D test set</a></li>
+            </div>
+            
+            <br>
+            
+            Otherwise, If you want to download the raw datasets instead, please use the following links:
+                (<a href="https://drive.google.com/file/d/1qswKclq4BlnHSGMSgzLmUu8iqdUXD8ZC/view">Nr3D</a>, <a href="https://drive.google.com/drive/folders/1DS4uQq7fCmbJHeE-rEbO8G1-XatGEqNV">Sr3D</a>).
+        
+            <br>
+            <br>
+            <b>Note:</b> The official code of Referit3D paper for training/testing takes as input the raw datasets because it applies the filters mentioned above on the fly.
         </div>
     </div>
 
